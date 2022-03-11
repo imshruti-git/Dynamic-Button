@@ -8,8 +8,9 @@ function App() {
     <div className="App">
     <Button 
       type='button'
-      buttonStyle='btn--danger--outline'
-      buttonSize='btn--large'
+      buttonStyle='danger-dashed'
+      buttonPadding='30px 30px'
+      fontSize='25px'
       buttonBackground='transparent'
     >
       <FaBeer /> download

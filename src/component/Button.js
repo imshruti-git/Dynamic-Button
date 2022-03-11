@@ -1,25 +1,21 @@
 import React from 'react'
 
 const STYLES = [
-  "btn--primary--solid",
-  "btn--warning--solid",
-  "btn--danger--solid",
-  "btn--success--solid",
-  "btn--primary--outline",
-  "btn--warning--outline",
-  "btn--danger--outline",
-  "btn--success--outline",
-  "btn--primary--dashed",
-  "btn--warning--dashed",
-  "btn--danger--dashed",
-  "btn--success--dashed",
+  "primary-solid",
+  "warning-solid",
+  "danger-solid",
+  "success-solid",
+  "primary-outline",
+  "warning-outline",
+  "danger-outline",
+  "success-outline",
+  "primary-dashed",
+  "warning-dashed",
+  "danger-dashed",
+  "success-dashed",
 ];
 
-const SIZES =[
-  "btn--medium",
-  "btn--large",
-  "btn--small"
-];
+
 
 const Button = ({
   children,
@@ -27,15 +23,15 @@ const Button = ({
   borderRadius,
   border, 
   buttonStyle, 
-  buttonSize,
-  buttonBackground
+  buttonBackground,
+  buttonPadding,
+  fontSize
   }) => {
 
 
     const checkButtonStyle = STYLES.includes(buttonStyle)? buttonStyle: STYLES[0];
 
-    const cheButtonSize = SIZES.includes(buttonSize) ? buttonSize: SIZES[0];
-
+   
    
 
   return (
@@ -44,8 +40,11 @@ const Button = ({
         style={{
                 borderRadius: borderRadius,
                 border: border,
-                background: buttonBackground}}
-        className={`btn ${checkButtonStyle} ${cheButtonSize}`}
+                background: buttonBackground,
+                padding: buttonPadding,
+                fontSize: fontSize
+              }}
+        className={`btn ${checkButtonStyle}`}
     >
         {children}
     </button>
