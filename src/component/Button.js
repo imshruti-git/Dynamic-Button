@@ -1,32 +1,53 @@
 import React from 'react'
 
-const Button = (
-    ButtonName,
+const STYLES = [
+  "btn--primary--solid",
+  "btn--warning--solid",
+  "btn--danger--solid",
+  "btn--success--solid",
+  "btn--primary--outline",
+  "btn--warning--outline",
+  "btn--danger--outline",
+  "btn--success--outline",
+  "btn--primary--dashed",
+  "btn--warning--dashed",
+  "btn--danger--dashed",
+  "btn--success--dashed",
+];
 
-    ButtonWidth,
-    ButtonHeight,
-    FontColor,
-    BorderColor,
-    FontSize,
-    BorderRadius,
-    BackgroundColor,
-    BorderOutline
-    
-) => {
+const SIZES =[
+  "btn--medium",
+  "btn--large",
+  "btn--small"
+];
+
+const Button = ({
+  children,
+  type,
+  borderRadius,
+  border, 
+  buttonStyle, 
+  buttonSize,
+  buttonBackground
+  }) => {
+
+
+    const checkButtonStyle = STYLES.includes(buttonStyle)? buttonStyle: STYLES[0];
+
+    const cheButtonSize = SIZES.includes(buttonSize) ? buttonSize: SIZES[0];
+
+   
+
   return (
     <button
+        type={type}
         style={{
-            width: ButtonWidth,
-            height: ButtonHeight,
-            color: FontColor,
-            borderColor: BorderColor,
-            fontSize: FontSize,
-            borderRadius: BorderRadius,
-            backgroundColor: BackgroundColor,
-            border: BorderOutline
-        }}
-        className='Dynamic-button'>
-        {ButtonName}
+                borderRadius: borderRadius,
+                border: border,
+                background: buttonBackground}}
+        className={`btn ${checkButtonStyle} ${cheButtonSize}`}
+    >
+        {children}
     </button>
   )
 }

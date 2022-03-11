@@ -1,19 +1,120 @@
 .App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #ffd028;
 }
 
-.Dynamic-button{
-  width: 100px;
-  height: 50px;
-  color: black;
-  font-size: 20px;
+:root{
+  --primary: #4628ff;
+  --warning: #ffd028;
+  --danger: #eb3f27;
+  --success: #75fa83;
+  --white: #fdfdfd;
+  --dark: #181717;
+}
+
+
+.btn{
+  font-weight: 400;
   cursor: pointer;
+  transition: transform  0.3s ease;
 
 }
-.Dynamic-button:hover{
-  box-shadow: 10px 10px rgb(209, 205, 205);
+.btn:hover{
+  box-shadow: 3px 3px rgb(209, 205, 205);
+  transform: translateY(-3px);
 }
+
+/*button colors and styles */
+.btn--primary--solid {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+
+.btn--warning--solid {
+  background-color: var(--warning);
+  color: var(--white);
+  border: 2px solid var(--warning);
+}
+ .btn--danger--solid{
+   background-color: var(--danger);
+   color: var(--white);
+   border: 2px solid var(--danger);
+ }
+
+ .btn--success--solid{
+   background-color: var(--success);
+   color: var(--white);
+   border: 2px solid var(--success);
+ }
+
+ .btn--primary--outline {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn--warning--outline {
+  background-color: var(--white);
+  color: var(--warning);
+  border: 2px solid var(--warning);
+}
+ .btn--danger--outline{
+   background-color: var(--white);
+   color: var(--danger);
+   border: 2px solid var(--danger);
+ }
+
+ .btn--success--outline{
+   background-color: var(--white);
+   color: var(--success);
+   border: 2px solid var(--success);
+ }
+
+ .btn--primary--dashed {
+  background-color: var(--white);
+  color: var(--primary);
+  border: dashed var(--primary);
+}
+
+.btn--warning--dashed {
+  background-color: var(--white);
+  color: var(--warning);
+  border: dashed var(--warning);
+}
+ .btn--danger--dashed{
+   background-color: var(--white);
+   color: var(--danger);
+   border: dashed var(--danger);
+ }
+
+ .btn--success--dashed{
+   background-color: var(--white);
+   color: var(--success);
+   border: dashed var(--success);
+ }
+
+ /*button sizes */
+
+ .btn--medium{
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+ .btn--large{
+   padding: 30px 30px;
+   font-size: 25px;
+ }
+ 
+
+ .btn--small{
+   padding: 15px 30px;
+   font-size: 20px;
+ }
