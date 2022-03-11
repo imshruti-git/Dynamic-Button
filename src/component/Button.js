@@ -25,7 +25,8 @@ const Button = ({
   buttonStyle, 
   buttonBackground,
   buttonPadding,
-  fontSize
+  fontSize,
+  textColor
   }) => {
 
 
@@ -42,7 +43,8 @@ const Button = ({
                 border: border,
                 background: buttonBackground,
                 padding: buttonPadding,
-                fontSize: fontSize
+                fontSize: fontSize,
+                color: textColor
               }}
         className={`btn ${checkButtonStyle}`}
     >
